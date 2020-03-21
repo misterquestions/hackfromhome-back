@@ -2,6 +2,8 @@ import express, { Application } from 'express';
 import cors from 'cors';
 import { Routes } from './routes';
 
+require('./db/moongose');
+
 class Core {
   private readonly app: Application = express();
 
