@@ -1,11 +1,14 @@
 import express, { Application } from 'express';
-import cors from 'cors';
 import { Routes } from './routes';
+import cors from 'cors';
+import * as dotenv from 'dotenv';
 
 class Core {
   private readonly app: Application = express();
 
   public initialize() {
+    dotenv.config();
+
     this.app.use(cors());
     this.app.use(express.json());
     this.app.use(express.urlencoded({ extended: false }));
