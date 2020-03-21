@@ -1,7 +1,21 @@
+import express, { Application } from 'express';
+import cors from 'cors';
+import { Routes } from './routes';
 
 class Core {
-  public initialize() {
+  private readonly app: Application = express();
 
+  public initialize() {
+    this.app.use(cors());
+    this.app.use(express.json());
+    this.app.use(express.urlencoded({ extended: false }));
+
+    const routes: Routes = new Routes();
+    this.app.use('/api', routes.getRouter());
+
+    this.app.listen(process.env.port || 3000);
+
+    console.log('Application started!');
   }
 }
 
@@ -13,6 +27,6 @@ class Core {
 *   Make sure not to create two or more instances of core class.
 *
 */
-const application: Core = new Core();
+const core: Core = new Core();
 
-application.initialize();
+core.initialize();
