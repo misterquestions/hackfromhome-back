@@ -1,7 +1,7 @@
 {
   "name": "ts-boilerplate",
   "version": "1.0.0",
-  "description": "A project template for new Node.js projects using Typescript with essential tools for testing",
+  "description": "Hackathon project to create a coding challenges platform",
   "main": "dist/main.js",
   "scripts": {
     "build": "npm run lint && rimraf ./build && tsc",
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MisterQuestions/node-ts-boilerplate.git"
+    "url": "git+https://github.com/MisterQuestions/hackfromhome-back.git"
   },
   "keywords": [
     "typescript",
@@ -22,12 +22,11 @@
     "chai",
     "nodemon"
   ],
-  "author": "Fernando Lopez",
-  "license": "MIT",
+  "author": "",
   "bugs": {
-    "url": "https://github.com/MisterQuestions/node-ts-boilerplate/issues"
+    "url": "https://github.com/MisterQuestions/hackfromhome-back/issues"
   },
-  "homepage": "https://github.com/MisterQuestions/node-ts-boilerplate#readme",
+  "homepage": "https://github.com/MisterQuestions/hackfromhome-back#readme",
   "devDependencies": {
     "@types/chai": "^4.2.9",
     "@types/mocha": "^7.0.1",
