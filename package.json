@@ -5,10 +5,11 @@
   "main": "dist/main.js",
   "scripts": {
     "build": "rimraf ./build && tsc",
+    "deploy": "npm run build && rimraf ./src && npm run start",
     "lint": "eslint . --ext .ts",
     "lint-fix": "eslint . --ext .ts --fix",
     "start-dev": "nodemon",
-    "start": "npm run build && node dist/main.js",
+    "start": "node dist/main.js",
     "test": "mocha -r ts-node/register tests/**.test.ts"
   },
   "repository": {
