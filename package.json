@@ -1,5 +1,5 @@
 {
-  "name": "ts-boilerplate",
+  "name": "hackfromhome-back",
   "version": "1.0.0",
   "description": "Hackathon project to create a coding challenges platform",
   "main": "dist/main.js",
